@@ -1,0 +1,106 @@
+<!-- display property is for controlling layout 
+     display property is used for showing how an element is shown on webpage
+     Every html element has a default display value.
+     default display value may be inline or block.
+     Display property is used to change the default display behaviour of HTML elements
+-->
+
+
+<!-- 
+    BLOCK LEVEL ELEMENTS
+    INLINE ELEMENTS
+-->
+
+
+
+<!-- 
+    BLOCK LEVEL ELEMENTS
+    1. Always starts from new line.
+    2. takes complete space from left to right
+    3. div element is a block level element
+    4. ex: div , h1-h6 , p , form , header , footer , section  
+-->
+
+
+<!-- 
+    INLINE ELEMENTS
+    1. Always starts from existing line
+    2.takes only necessary space
+    3. ex: span , img , a
+-->
+
+
+<!-- 
+    mainly we use 6 display property values
+    1. Block
+    2. Inline
+    3. Inline-Block
+    4. Flex
+    5. Grid 
+    6. None
+
+
+1. Block 
+
+    <div style="display:block;" class="block-element"> this is red color </div>
+    one element on one line
+    all height width properties are applied 
+
+
+2. Inline
+
+   style= "display:inline;" 
+   in case of inline height , width will not be applied.Padding , border px will also applied 
+   elements are followed adjacent to it 
+
+3. Inline - Block
+
+    <head>
+        <style>
+            .li{
+                display : block;
+            } 
+        </style>    
+    </head>    
+
+    here height,width are applied and also adjacent elements in a single line is possible 
+
+NOTE: text - align : center 
+
+4. Flex 
+
+   1. display : Flex 
+   2. it always to be wrapped with child elements where display : flex ; 
+      aligns them automatically
+   3. Flexbox is dynamic i.e Adjusts layout of its children based on available space on the container.
+   4. It is responsive by design for different screen sizes.It can adapt the children automatically
+   5. Flex box and inside flex-items
+   6. Continues in same line by default and also in horizontal flex items are aligned by default
+
+5.Grid
+
+   1. Introduces 2dimenional arrangement of elements
+   2. Complex structured 2d arrangement .Precise control is present here when compared to flex box
+   3. space between elements can be managed by grid
+
+When to Use grid
+
+
+When you need structured layouts with rows and columns (e.g., dashboards, photo galleries,
+complex web page designs).
+When you need precise control over element alignment and positioning.
+
+
+When to Use Flex Instead of Grid
+Use flex for simpler, one-dimensional layouts like navigation bars or row/column arrangements.
+
+
+
+
+6.None
+    1. display : none;
+    2. element will not be visible
+
+
+
+
