@@ -1,0 +1,42 @@
+/* 
+    ViewPort 
+    ViewPort Height vh
+    ViewPort width  vw
+    ViewPort is the window through which users view a webpage.
+    example :
+    1vw : 1% of viewport width
+    50vw: 50% of viewport width
+    1vh : 1% of viewport height
+    50vh: 50% of viewport height
+
+Absolute Units:
+
+Absolute Units are fixed and donot change based on screen size or context.
+They are great for precise measurements and lack flexibility for responsive designs.
+examples : px(pixels) , centimeters(cm) , inches(in) 
+
+Relative Units:
+
+Relative Units are dynamic depends on reference ex:parent element,root element,view port size.
+They are ideal for responsive designs because they adjust based on context.
+
+1.em 
+    1em refers to size based on parent element fontsize.
+2.rem
+    1rem refers to size based on root element fontsize.
+*****em or rem based on top elements fontsize.
+    parent fontsize:2px,root fontsize:5px
+Example: 2em  : 4px
+         2rem : 10px
+3.% 
+    for width/height : It depends on parent element width or height .
+    for padding/margin:It depends on parent element width. 
+4.vh or vw
+    10vh means 10% of viewport height
+    30vw means 30% of viewport width
+5.vmin or vmax
+   xvmin means xpercentage of min(height,width).
+   xvmax means xpercentage of max(height,width).
+*/
+
+

@@ -1,0 +1,31 @@
+/* 
+    box modal ---> content ,
+                   padding ,
+                   border  ,
+                   margin  .
+
+
+-->  CONTENT  <--
+ innermost area where the content,images are present
+ height and width if mentioned explicitly then this content will of that corresponding height and width
+ unless box-sizing is set to border-box.
+
+--> padding <--
+ space between the content and border
+ increase total size of element without changing size of the content
+
+--> border <--
+ adds to the total size of element
+ border can have a specific thickness,style,color
+ surrounds padding
+
+--> Margin <--
+ space between the elements border and neighboring elements.
+ Doesnot affect the size of the element but determines spacing around it.
+
+Note :
+1.width , height mentioned are only for content h,w.
+2.total width = content + padding + border + margin.
+3.to overcome other width contributions box-sizing is set to border-box 
+
+ */

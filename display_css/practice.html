@@ -104,3 +104,72 @@ Use flex for simpler, one-dimensional layouts like navigation bars or row/column
 
 
 
+MORE ABOUT FLEX:
+
+Flex has 6 properties i.e on flex container
+
+1.Align-items
+2.Align-content
+3.Justify-content
+4.Flex-direction
+5.Flex-wrap
+6.Flex-Flow
+
+1.Flex-direction property :
+    It says about in which direction container wants to stack flex items.
+  
+    .flex-container{
+        flex-direction : column;
+    }
+    .flex-container{
+        flex-direction : column-reverse;
+    }
+
+
+2.Flex-wrap property :
+    It says whether the flex-items should wrap or not
+    default : nowrap;
+    .flex-container{
+        flex-wrap :wrap;
+    }
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+in wrap reverse second row begins with initial elements and first row begins with left over elements
+
+3.Flex-Flow property 
+    It sets both properties at a time 
+    flex-direction and flex-wrap  
+    .flex-container{
+        flex-flow: row wrap
+    }
+
+4.Justify-content property
+    It is used to align flex-items.
+    center : aligns the flex-items at center of the container.
+    flex-start : aligns the flex-items at begining of the container.
+    flex-end : aligns the flex-items at ending of the container.
+    space-around : around as well spaces will be present.
+    space-between : spaces between the elements.
+
+5.Align-items property
+    It is used to align items perpendicular to main axis.
+    .flex-container{
+        align-items : center; // baseline //flex-start // stretch
+    }
+
+6.Align-content property 
+    Align-Content property is used to align flex-lines.
+    space-between
+    space-around
+    stretch
+    center 
+    flex-start
+    flex-end
+    
+    --> 
