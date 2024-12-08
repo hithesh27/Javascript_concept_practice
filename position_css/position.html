@@ -10,12 +10,47 @@ Position property says types of positioning method used for an element.
 4.absolute
 5.sticky
 
-1. static:(By Default)
-static positioned elements are not affected by top, bottom ,...
-Positioned in normal flow of webpage
-2. relative:
-An element with position:relative is positioned relative to its normal position.
-Other content will not be adjusted to fit into any gap left by the element.
-Complete element moves accordingly.
-3. Fixed:
+top,left,right,bottom will start working only after mentioning postion value.
+they also work differently based on different position value.
+
+Static :
+html elements are positioned static by default . 
+static positioned elements are not affected by right , left , top , bottom .
+These elements are positioned in normal way of the web page flow .
+
+Relative :
+*****positioned relative to its normal position.
+Setting top,left,right,bottom properties of a relatively positioned element will cause it to be 
+positioned away from normal position.
+*****Other content will not be adjusted to fit into any gap left by the element.
+When I mention Top:100px;
+then the updated position will have distance from existing position as 100px.
+
+Fixed :
+*****positioned relative to viewport.
+which means it stays at same place even if page is scrolled.
+top,left,right,bottom are used to position the element.
+*****A fixed element doesnot leave a gap in the page where it would have been normally located.
+*****This fixed will also be mixed with other elements
+
+Absolute :
+element with positioned absolute is positioned relative to nearest positioned ancestor.
+instead of postioned relative to viewport.
+If no positioned ancestor then it moves along with the scrolling and it then considers document as 
+reference.
+
+nearest positioned ancestor :
+
+1.Fixed 
+2.Absolute
+3.Relative 
+
+
+Sticky :
+sticky postioned element will only work if only one of them is mentioned left , right , top , bottom.
+element is positioned based on users scroll position.
+
+***** alone left or right doesnot work( for horizontal position ). 
+along with that their is a need of using top or bottom.
+it will be present in 
 -->
