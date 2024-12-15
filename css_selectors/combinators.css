@@ -1,0 +1,28 @@
+/* Combination Selectors :
+    CSS COMBINATORS:
+    1.explains relationship between selectors.
+    2.A css selector can contain more than one simple selector.
+    3.Between the simple selectors we can include a combinator.
+    selector {
+      property : value ;
+    }
+    i) Descendent Combinator : (Space)
+       it matches all elements descendants of a specified element.
+       div p {
+          color : red;
+       }
+   ii) Child Combinator : (>)
+        selects all the element that are children of a specified element.
+        div > p {
+          color : red;
+        }
+  iii) Next sibling Combinator : (+)
+        selects an element that is next to a specified element.
+        sibling elements must have a same parent element(immediately following).
+   iv) Subsequent-sibling Combinator : (~)
+        selects all the element that are next to specified element.
+        sibling elements have the same parent.
+    space -all descendants 
+    >     -immediate child
+    +     - 
+    */

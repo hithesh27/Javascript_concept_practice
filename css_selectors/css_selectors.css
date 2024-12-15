@@ -1,0 +1,64 @@
+/* 
+CSS Selectors :
+
+Selector {
+    property : value ;
+}
+
+CSS selectors selects html elements you want to style .
+CSS selectors are used to find HTML elements you want to style .
+CSS selectors divided into 5 categories :
+1.Simple Selectors:
+  select elements based on class,id,name means html tag name.
+  CSS Element selector:
+  Element selector selects HTML elements based on element name.
+  p {
+    color : red ;
+    text-align : center ;
+  }
+  CSS Id selector:
+  uses id attribute of an html element to select a specific element.
+  #para1 {
+    color : red;
+    text-align : center;
+  }
+  CSS Class selctor:
+  Class selector selects html elements with a specific class attribute.
+  .center{
+    text-align : center;
+    color : red;
+  }
+  p.center{
+    text-align : center;
+    color : red;
+  }
+  CSS Universal selector:
+  Selects all html elements on the page.
+  * {
+    text-align : center;
+    color : blue;
+  }
+  CSS Grouping selector:
+  h1,h2,p{
+    color : orange;
+  }
+
+
+*/
+
+
+
+/* 
+    Pseudo classes selectors : 
+    are used to define special state of an element.
+    1.style an element when a user moves the mouse over it.
+    2.style visited and unvisited links differently.
+    3.style an element when it gets focus.
+    4.style valid / invalid / required / optional form elements.  (Visual Feedback).
+      selector : psuedo-class{
+            property :value ;
+      }
+    anchor psuedo class:
+    
+
+*/

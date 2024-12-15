@@ -1,0 +1,66 @@
+/* 
+Psuedo class elements :
+
+styles are applied for an element based on the special state of an element.
+ex: 1.styles visited and unvisited links. 
+    2.style an element when it gets focus.
+    3.style an elment when a user hovers an element over it.
+
+    selector : psuedo class {
+    
+    property : value ;
+    
+    }
+
+Anchor psuedo classes :
+    //Initial State/Unvisited Link.
+    a:link{
+        property : value;
+    }
+    //mouse over a link
+    a:hover{
+        property :value;
+    }
+    //selected
+    a:active{
+        property :value;
+    }
+    a:visited {
+        property : value;
+    }
+
+HTML Classes along with psuedo classes:
+a.box1:hover{
+        property : value ;
+}
+
+Small tooltip hover :
+
+when hover on paragraph element then what happens 
+a : hover p{
+} 
+
+p{
+display : none
+}
+
+first child psuedo class:
+
+ a : first-child {
+ background-color : red;
+ }
+ div a :  first-child {
+background-color : blue;
+ }
+div : first-child a {
+ property : value;
+}
+
+
+cssselector :lang(language){
+    property : value;
+    quotes : "~" "~";
+}
+
+
+*/

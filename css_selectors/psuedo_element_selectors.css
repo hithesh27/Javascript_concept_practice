@@ -1,0 +1,53 @@
+/*
+CSS Psuedo Elements :
+
+Used to style specific parts of a an element.
+Style first letter or first line of an element.
+Insert content before or after an element.
+Style the markers of list items.
+style the viewbox behind a dialog box.
+
+Syntax Of psuedo elements :
+selector :: psuedo-element {
+    property : value;
+}
+
+
+p::first-line{
+property : value;
+}
+can only be applied for block elements 
+
+p::first-letter{
+color : blue;
+}
+can only be applied for block elements 
+
+p.box1::first-letter{
+color : red;
+}
+
+Multiple psuedo elements 
+p::first-letter{
+    font-size: xx-large;
+} 
+p::first-line {
+    font-size: small-caps;
+}
+
+when copying the text background-color,color ,cursor ,outline can be changed.
+::selection{
+
+}
+::marker{
+
+}
+
+h1::before{
+    content : "smiley.gif";
+}
+::marker{
+    color : red;
+    font-size:23px;
+}
+*/
