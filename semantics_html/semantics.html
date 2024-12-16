@@ -1,26 +1,56 @@
 <!-- 
-    1. Semantic Elements
-    2. Non-Semantic Elements
-1. Semantic Elements :
-It describes its meaning clearly to browser and developer. Ex: Form , Table , Article tags.
-2. Non-Semantic Elements :
-Tells nothing about its content. Ex: span , div tags.
-span is inline , div is block element .
+Semantic elements :
+Elements with a meaning.where both browser and developer can understand.
+Form , table , article clearly defines its content.
+nonsemantic elements :
+div and span both doesnot says nothing about content.
+span is inline element used to style a part of sentence.
 
-Semantic elements in HTML:
+many website contain html code like 
 
-Many websites contain html code like 
-<div id = "nav">
-</div>
-<div class="header">
-</div>
-<div class="Footer">
-</div>
-for header , footer , navigation .... in a website.
-In html their are some semantic elements that can be used to define different parts of a web page.
-<header>
-<nav>
-<main>
-<footer>
+<div id = "header"> <div class= "nav"> <div id = "footer">
 
+    semantic elements to define different parts of web page.
+1.<section>
+        defines a section in document.
+        A section is a thematic grouping of content with heading.
+
+    1.contact information
+    2.chapters
+    3.Introduction
+<section>
+<h1>WWF</h1>
+<p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+</section>
+
+2.Nesting <article> in <section> or Vice Versa
+3.header  - <header> elements in one HTML document. However, <header> 
+cannot be placed within a <footer>, <address> or another <header> element.
+4.<footer> element typically contains:
+authorship information
+copyright information
+contact information
+sitemap
+back to top links
+related documents
+5.<nav> contains set of navigation links.
+6.Aside content define some content aside fron the content it is placed in.(like a sidebar).
+
+
+The use of semantic elements in HTML can be summarized in these key points:
+
+Improves Readability: Makes the structure of the webpage easier to understand for 
+developers by clearly defining sections (e.g., <header>, <footer>).
+
+Enhances Accessibility: Helps assistive technologies (like screen readers) identify
+ the purpose of content, improving the experience for users with disabilities.
+
+Better SEO: Search engines can understand the content more effectively, which can
+ improve website rankings.
+
+Standardized Structure: Creates a consistent and meaningful structure for web pages.
+
+Easier Maintenance: Clear and descriptive tags make code simpler to update or debug.
+
+In short: semantic elements make web pages more meaningful, accessible, and efficient.
 -->
