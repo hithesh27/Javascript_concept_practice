@@ -30,7 +30,7 @@ Example: 2em  : 4px
          2rem : 10px
 3.% 
     for width/height : It depends on parent element width or height .
-    for padding/margin:It depends on parent element width. 
+    for padding/margin :It depends on parent element width. 
 4.vh or vw
     10vh means 10% of viewport height
     30vw means 30% of viewport width
