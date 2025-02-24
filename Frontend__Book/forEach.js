@@ -1,3 +1,4 @@
+//why forEach function ??
 //If callbackFn is arrow function.See where this refers to.
 const obj = {
     name: "Hithesh",
