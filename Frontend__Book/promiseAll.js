@@ -1,4 +1,4 @@
-//why promise.all() is needed ??
+//why Promise.all() is needed ??
 /* 
     It is used to execute multiple async operations in parallel
     and wait for all of them to complete before proceeding.
@@ -50,7 +50,64 @@ async function fetchUserData() {
     console.log({ profile, orders, notifications });
 }
 fetchUserData();
-All reuests start simultaneously and function waits for all of them to complete before continuing.
+All requests start simultaneously and function waits for all of them to complete before continuing.
 This is much faster.
 */
 
+//Definition:
+/* 
+
+Promise.all(iterable) is a method that takes multiple promises as input and returns a single promise that:
+✅ Resolves when all input promises are resolved, returning an array of results.
+❌ Rejects immediately if any promise fails, returning the first rejection error.
+
+*/
+
+//polyfill
+
+
+/* const p1=(timer)=>{
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        if(timer==5000) reject("5000 rejected");
+        resolve(`${timer}`);
+        },timer);
+  })
+}
+const promsieAll=(promisearray)=>{
+    let results=[];
+    let count=0;
+   return new Promise((resolve,reject)=>{
+        promisearray.forEach((pr,ind,arr)=>{
+        pr.then((val)=>{
+//            console.log(val);
+            results[ind]=val
+            ++count;
+            if(count==arr.length){
+                resolve(results)
+            }
+            })
+        .catch((err)=>{
+            console.log(err);
+            })
+        })
+   })
+}
+promsieAll([p1(1000),p1(5000),p1(2000)]).then((val)=>console.log(val))
+.catch((err)=>console.log(err)); */
+
+//Error case how it is handled ???
+
+/* 
+1.Fetching User Dashboard Data (All Must Load Together)
+Imagine you're building a user dashboard that shows:
+
+Profile details (/api/user/profile)
+Orders (/api/user/orders)
+Notifications (/api/user/notifications)
+If any of these fail, the dashboard should not load incomplete data, so you use Promise.all()
+
+
+2.Downloading Multiple Images (All or Nothing)
+If you're downloading multiple images for a gallery, but even one fails, you don't want an incomplete gallery
+*/
