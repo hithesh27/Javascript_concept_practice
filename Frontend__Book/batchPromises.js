@@ -25,8 +25,9 @@ const p=(timer)=>{
 new Array(4).fill(1).reduce((prev,cur,ind,arr)=>{
   return prev.then((val)=>{
         if(val) console.log(val);
-            return Promise.all([p(num++),p(num++)]);
-        });
+             Promise.all([p(num++),p(num++)]);
+             return Promise.resolve();
+        })
 },Promise.resolve());
 /* new Array(5).fill(1).reduce(async (prev,cur,ind,arr)=>{
     const arrayVal=await Promise.all([p(num++),p(num++),p(num++),p(num++),p(num++)]);
@@ -40,13 +41,13 @@ new Array(4).fill(1).reduce((prev,cur,ind,arr)=>{
             resolve(`${timer}`);
         },timer*100);
     });
-} */
-/* let num=1;
+}
+let num=1;
 let prev=Promise.resolve();
 const arr=new Array(5).fill(1);
 for(let i=0;i<arr.length;i++){
         prev.then((val)=>{
           if(val) console.log(val);
-           prev=Promise.all([p(num++),p(num++)]);
+        prev=Promise.all([p(num++),p(num++)]);
     });
 } */
