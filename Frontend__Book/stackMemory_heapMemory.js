@@ -21,6 +21,12 @@ But JavaScript has automatic garbage collection
 //Stack Memory (Used for Primitives):
 
 /* 
+let x=10;
+x=20;
+creates a new memory slot for x from 10 to 20.
+*/
+
+/* 
 1.Each variable gets its own memory space.
 2.Primitives(Number,String,Boolean,null,undefined,symbol) are stored directly in the stack.
 let a=10;
