@@ -31,15 +31,17 @@ function print(){
     
 }
  */
+
 //print.call()
 
 /* 
     Concept 
-    Funtions are also to some extent are objects.Whatever u create in js will have access to some hidden
+    Functions are also to some extent are objects.Whatever u create in js will have access to some hidden
     propeties and methods.These comes via prototype. 
 */
 
-/* Steps to learn what exactly is prototype:
+/*
+Steps to learn what exactly is prototype:
     1.When an object is created.
     2.Js engine automatically puts these hidden properties into an object and attaches to your object.
       So an object is attached to original object and that is how u get access to those methods and 
@@ -55,19 +57,41 @@ function print(){
 
 /*Let us see what is arr.__proto__??
     1.arr.__proto__ is an object which contains many properties and functions.
-    2.It is same as Array.prototype.
+    2.
     3.__proto__ is an object that means __proto__ also has prototype for it
     4.Even arr.__proto__ has its own prototype.
     5.So,now arr.__proto__.__proto__ it says protoype of an array is an object.
       Every object again has prototype.
     6.arr.__proto__.__proto__ == obj.prototype/Object.__prototype__
-
-              Main Difference between Object.prototype and obj.proto
-1.
-              
-  
-
-
-
-
 */
+
+
+/* 
+  .prototype(Function Prototype)
+  -->Available only on constructor function.(Function used with new keyword).
+  -->Used to add methods or properties for all instances of a constructor.
+  Ex:
+*/
+
+/*
+Array/Promise are built in objects and constructor functions.It means they are both.
+Built in objects means predefined objects that are available globally.
+Constructor Functions means functions used to create instances of objects with new keyword.  
+These are predefined objects provided by javascript.
+They have properties and methods that can be used directly.
+Examples :
+console.log(JSON.stringify({name : "Hithesh"}));
+console.log(Date.now());
+console.log(Math.PI);
+*/
+function Person(name){
+  this.name=name;
+}
+Person.prototype.greet=function (){
+  return `Hello,I am ${this.name}`;
+}
+
+const p1= new Person("Hithesh");
+const p2= new Person("Ram");
+console.log(p1.greet());
+console.log(p2.greet());
