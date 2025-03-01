@@ -36,9 +36,11 @@ console.log(Math.PI);
 //Are built in objects like Array and Promise also constructor functions.
 //Yes 
  
+/*
 const arr1=[];//array created by array literals.
 const arr2=new Array(2); //array created with new keyword.It creates empty slots.
 console.log(arr2);
 console.log(arr1 instanceof Array);
 console.log(arr2 instanceof Array);
+ */
 //both will invoke the array constructor function directly or indirectly.

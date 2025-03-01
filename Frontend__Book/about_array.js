@@ -37,3 +37,7 @@ console.log(arr4,arr41);
 
 //4. .from()
 //5.  using spread operator
+
+/* 
+We will learn later about it.
+*/
