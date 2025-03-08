@@ -123,26 +123,59 @@ console.log(p1.sayBye());
 
 /* 
   concept - 3 -- what is prototypal inheritance ?
+  One object trying to access methods and properties of other object <-- Inheritance.
+*/
+/* 
+Prototype Chaining:
+arr.__proto__                 -->arr.__proto__.proto__         --> arr.__proto__.__proto.__proto
+Array.prototype(Gives Object) -->Object.prototype(Gives Object)--> NUll 
+func.__prot__                  --> further same flow (object )...... ..
+Function.prototype(which is Fn) --> ............
+NOte-1:Only function prototype gives function.All other prototypes gives object for its prototype.
+Note-2:Only function/custom constructor fn prototype gives fn and then its corresponding prototype
+       gives Object protoytpe then further --> Null  
+By using .(dot) operator can access properties and methods inside .__proto__.
+*/
+
+//best example to understand Prototype Chaining :
+
+/* 
+  const obj={
+    name : "Hithesh",
+    age : 21
+    display : function(){
+    
+    }
+  }
 
 */
 
 /* 
   concept - 4 -- what is typeof Object  or  etc ......
+function display(){  
+}
+const obj1=display();
+console.log(typeof display);//callable objects are treated specially for typeof as Object.
 */
 
-function display(){
-  this.id="Hello";
-}
-const obj1=new display();
-console.log(typeof display.__proto__);
 /* 
   concept - 5 -- Everything in js is an object including functions.Explaination with prototypal inheritance.
     Reason :
+Reason1 <---
+Functions are also some what objects.They have also access to hidden properties and methods and variables
+as well.
+function func(){
+ 
+}
+func.call(); 
+call method is available on func function.
+Reason2 <--
+  Whether it is function/object/array down the prototype chain everything is an object.
 */
 
-
-
-
+//Array.__proto__ = ....  .It breaks hidden class optimizations, slows property lookups
+//Huge performance issue.
+//      -------------------------------END ---------------------------------------------------
 //Additional NOtes
 /* 
   .prototype(Function Prototype)
@@ -162,6 +195,7 @@ console.log(JSON.stringify({name : "Hithesh"}));
 console.log(Date.now());
 console.log(Math.PI);
 */
+
 /*
 function Person(name){
   this.name=name;
@@ -169,24 +203,20 @@ function Person(name){
 Person.prototype.greet=function (){
   return `Hello,I am ${this.name}`;
 }
-
 const p1= new Person("Hithesh");
 const p2= new Person("Ram");
 console.log(p1.greet());
 console.log(p2.greet());
- */
+*/
 
 /* function Person(name) {
   this.name = name;
 }
-
 // Original prototype method
 Person.prototype.greet = function () {
   return `Hello, I am satish`;
 };
-
 let p1 = new Person("Alice"); // Instance created BEFORE prototype modification
-
 // COMPLETELY REPLACING Person.prototype
 Person.prototype = {
   greet: function () {
@@ -196,13 +226,13 @@ Person.prototype = {
     return `Goodbye from ${this.name}`;
   }
 };
-
 let p2 = new Person("Bob"); // Instance created AFTER prototype modification
 console.log(p1.greet());
 console.log(p2.greet());
 console.log(Person.prototype === p1.__proto__);
 console.log(Person.prototype === p2.__proto__);
  */
+
 /* const obj={
   name :"Hithesh"
 }
@@ -210,3 +240,8 @@ console.log(typeof Object);
 console.log(typeof obj);
 console.log(typeof obj.__proto__);
  */
+
+/* 
+console.log("**********")
+console.log(Function.prototype.__proto__ === Object.prototype);
+*/
