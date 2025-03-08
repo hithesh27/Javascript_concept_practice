@@ -10,6 +10,7 @@ const details={
     }
 }
 Here address is nested inside another details.
+address is called nested object.
 */
 
 
@@ -17,5 +18,6 @@ Here address is nested inside another details.
 Nested element means an object/array inside another array/object.
 So ,here numbers is an array containing other arrays(nested elements).
 example :
-const numbers = [[1,2],[3,4]];
+const numbers = [[1,2],[3,4]]; 
+[1,2] is nested array.
 */
