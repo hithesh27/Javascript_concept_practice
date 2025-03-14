@@ -148,6 +148,8 @@ How to install loadash??
     to get package.json with basic statemnets we write 3. statement
 4.npm install loadash
 5.import _ from "loadash"
+6.then need to add in package.json .
+    "type": "module", //mention this in top-level-of-object
 */
 
 /* const obj={
