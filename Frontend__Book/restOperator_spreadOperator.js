@@ -38,8 +38,12 @@ const sum=(a,b,c)=>{
 }
 sum(...[1,2,3]);
  */
+//on strings also u can use spread operator.It will help in giving shallow copy or u can say copied by value  
+/*     const str="Hithesh";
+    console.log([...str]); */
 
-//Rest operator :collects all the multiple values into an array/object.  
+//Rest operator :collects all the multiple values into an array/object.  It is also shallow copy.
+//It means taking out specific properties from an object.
 /* 
 const sumAll=(...args)=>{
     return args.reduce((prev,val)=>{
@@ -69,7 +73,9 @@ const user ={
         n1: "n1"
     }
 };
-const {id,...halfaddress} = user;
+const id=100;
+const {id:id_1,...halfaddress} = user;
+//new_name_to_avoid_syntax_errors_as_both id are global if we didnot rename.
 halfaddress.address.n1="n3";
 console.log(halfaddress.address.n1)
 console.log(user); 
