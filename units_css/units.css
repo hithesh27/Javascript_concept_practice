@@ -1,30 +1,88 @@
 /* 
+Default font-size for html element is 16px.
+font-size will always be inherited from its parent font-size.If it not mentioned.
+
+
+Understanding containing block:-
+child Height is 2 times of the height of containing block.
+Example : 
+containing block means parent.
+
+If height or width is NOT explicitly specified, it defaults to auto.
+width: auto Explained
+For block elements: Expands to 100% of the parent’s width (unless constrained).
+For inline elements: Shrinks to fit its content (ignores width).
+
+height: auto Explained
+The height expands only as much as needed to fit the content.
+If there's no content, the height collapses to 0px.
+
 Two kinds of units:
 --> Relative Units     --> Absolute Units
 
---> Absolute Units:
 
+--> Absolute Units:
 Absolute Units are fixed and donot change based on screen size or context.
 They are great for precise measurements and lack flexibility for responsive designs.
-examples : px(pixels) , centimeters(cm) , inches(in) 
-
+examples : px(pixels) , centimeters(cm) , inches(in) .
 --> Relative Units:
-
-Relative Units are dynamic depends on reference ex:parent element,root element,view port size.
+Relative Units are dynamic depends on reference.
+ex:parent element,root element,view port size.
 They are ideal for responsive designs because they adjust based on context.
 1.em 
-    1em refers to size based on parent element fontsize.
+    Their are many cases on em.
+    parent and child??
+    case:i 
+    .parent{
+        font-size :15px;
+    }
+    .child{
+        font-size   :20px;
+        width       :3em; //for width it looks for its font-size .If its font-size it looks for its parent.
+        //width : 60px;
+    }
+    case:ii 
+    .parent{
+        font-size :20px;
+    }
+    .child{
+        font-size   :3em; //it looks for its ancestor so font-size : 60px;
+        width       :2em; //for width it looks for its font-size .So here it is mentioned as width: 120px;
+    }
+    case:iii
+    .parent{
+        font-size :20px;
+    }
+    .child{
+       //in this case font-size is not mentioned so it takes its parents font-size 20px
+        width       :2em; //for width it looks for its font-size .So here it is mentioned as width: 40px;
+        (so width always tries to look at parents font-size.)
+    }
 2.rem
-    1rem refers to size based on root element fontsize.
-*****em or rem based on top elements fontsize.
-    parent fontsize:2px,root fontsize:5px
+    1rem refers to size based on root element fontsize i.e html element.
+    parent fontsize:2px,html fontsize:5px
 Example: 2em  : 4px
          2rem : 10px
-3.% 
-    for width/height : It depends on parent element width or height .
+3.%
+It refers to dependency based on size of parent.
+    for width %  is always relative to parents width.Incase of width even if it is auto but still child takes half of it.
+    and as parent is set to auto it takes from its parent.
+    for height%  only works if parent has an explicit height(Otherwise it gets collapsed).
+    When using percentage (%) units, overflow is more likely to happen vertically because
+    height can collapse, but width does not.
+    for padding% means width of the containing block.
+    for margin%  means width of the containing block.
+    margin: 10% applies 10% of the parent's width on each side.
+    let suppose parent is 100px width then 
+    then for child {
+        margin : 10%;
+    }
+    for font-size% means font-size of the parent.
+    for line-height% means font-size of that element itself.
+    It depends on parent element width or height .
     for padding/margin :It depends on parent element width. 
 4.vh or vw
-        ViewPort 
+    ViewPort is based on size of browser window
     ViewPort Height vh
     ViewPort width  vw
     ViewPort is the window through which users view a webpage.
@@ -34,10 +92,16 @@ Example: 2em  : 4px
     1vh : 1% of viewport height
     50vh: 50% of viewport height
     10vh means 10% of viewport height
+    100vh means 100% of viewport height
     30vw means 30% of viewport width
 5.vmin or vmax
+   vmin or vmax is the max or min of the viewport height or width.
+   vmin means it takes minimum of viewport of height or width.
    xvmin means xpercentage of min(height,width).
    xvmax means xpercentage of max(height,width).
+   .age{
+        height:10vmin;
+   }
 */
 
 
