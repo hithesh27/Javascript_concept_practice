@@ -81,7 +81,7 @@ for(key in obj){
         a: "3"
     };
     console.log(obj); */
-
+//JS objects are implemented using hashmaps(unordered maps)
 //Question:2
 /* 
 let obj = {
@@ -108,8 +108,6 @@ let obj={
 }
 console.log(obj.toString()); //SO this will be a new key for following up code "[Object Object]"
 */
-
-
 /* const obj1={
     name : "Hithesh",
     class: "Btech"
@@ -124,7 +122,12 @@ obj1[obj2]=1000;
 obj1[obj3]=10000;
 obj1["nam"]="nam"
 console.log(obj1); */
-
 /* Note : about keys in objects.Keys should be strings.If they are not strings then javascript will change
 do obj1.toString() like fn to convert to string.But if it is variable and variable is not defined 
 then error can be seen. */
+
+//Question - 4 :
+/* 
+
+
+*/
