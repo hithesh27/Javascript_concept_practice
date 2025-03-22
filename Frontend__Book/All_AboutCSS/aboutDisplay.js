@@ -32,6 +32,9 @@ width : expands to 100% of their parent.
 height: expands based on content element.
 Explicitly
 set will work naturally.It means based on whatever height or width ,margin padding set accordingly.
+Some elements are block-level by default, meaning they take up the full width of their
+parent and force the next element to move to a new line.
+
 */
 
 /* 

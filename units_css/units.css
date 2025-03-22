@@ -1,4 +1,6 @@
 /* 
+What does it mean by an element is collapsed it means it will take up default values i.e 
+height and width as auto
 Default font-size for html element is 16px.
 font-size will always be inherited from its parent font-size.If it not mentioned.
 
