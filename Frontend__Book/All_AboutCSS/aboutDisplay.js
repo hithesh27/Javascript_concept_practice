@@ -74,3 +74,4 @@ If the content exceeds the available space → The entire inline-block element m
 //Final Note :
 //Yes! When you explicitly set a display value, the element fully adopts the behavior of 
 //that display type, and all the properties relevant to that new display type will be applied correctly.
+
