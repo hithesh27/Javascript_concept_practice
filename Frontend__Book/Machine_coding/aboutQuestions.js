@@ -37,3 +37,9 @@ You can directly import JSON like a module, but this won’t work in plain brows
 "Plain browsers" refer to regular web browsers like Chrome, Firefox, Edge, Safari, etc.,
 running without any extra tools (like Webpack, Vite, or Babel).
 */
+
+/* 
+JavaScript scans for imports first, then looks for the file.
+If the file exists, it loads and processes it before running the main script.
+Only after resolving all imports does it start executing the rest of main.js
+*/
