@@ -43,3 +43,13 @@ JavaScript scans for imports first, then looks for the file.
 If the file exists, it loads and processes it before running the main script.
 Only after resolving all imports does it start executing the rest of main.js
 */
+
+
+/*
+{question < questions.length ? <DisplayQuestion /> : ""}
+React ignores false, null, undefined, and 0 when rendering JSX.
+So, when the condition is false, it simply renders nothing (empty output) instead of false or 0.
+{question < questions.length ? <DisplayQuestion /> : <div>No more questions!</div>}
+More explicit than &&, but since "" is also ignored by React, the result is the same.
+More flexible → You can return an alternative message instead of just "".
+*/
